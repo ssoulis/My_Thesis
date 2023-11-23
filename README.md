@@ -1,2 +1,2 @@
 # My_Thesis
-Personality Prediction with deep learning techniques
+Personality Prediction using deep learning techniques
