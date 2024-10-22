@@ -103,12 +103,19 @@ In this project, we employed three types of ensemble learning techniques:  **Sta
 
 The **stacking ensemble** method is an approach where multiple base models make predictions, and a meta-model is trained to aggregate these predictions into the final output. In our setup, we used models such as ALBERT and DeBERTa as base models, and then fed their predictions into a meta-model.<br />
 
-The following image shows the stacking ensemble technique architecture
+The following image shows the stacking ensemble technique architecture<br />
 ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Stacking.PNG)
 
 ### 2. Hybrid Ensemble Technique
-The Hybrid Ensemble approach combines various ensembling methods, including Bayesian combination, majority voting, and stacking, to aggregate predictions from different models.
-The following image shows the hybrid ensemble technique architectures
+The Hybrid Ensemble approach combines various ensembling methods, including Bayesian combination, majority voting, and stacking, to aggregate predictions from different models.<br />
+
+The following image shows the hybrid ensemble technique architecture that leverages Stacking, Bayesian Combination and majority/weighted vote<br />
+
+![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/SBM-SBW.png)
+
+The following image shows the hybrid ensemble of the 2 Level Stacking model<br />
+
+![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/2LevelStacking.PNG)
 
 ### 3. Snapshot Ensemble Technique
 
