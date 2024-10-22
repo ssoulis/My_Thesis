@@ -1,4 +1,4 @@
-# My Thesis: Identifying inferences from textual data using deep learning techniques
+# Identifying inferences from textual data using deep learning techniques
 
 ## Project Overview
 
@@ -11,8 +11,8 @@ This repository contains all the code and research work conducted as part of my 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Model Evaluation](#model-evaluation)
-- [Ensemble Technique](#ensemble-technique)
-- [Results](#results)
+- [Ensemble Techniques](#ensemble-techniques)
+- [Results from the Ensemble Techniques](#results-from-the-Ensemble-Techniques)
 
 
 ## Folder Structure
@@ -124,7 +124,7 @@ The following image shows the snapshot ensemble architecture. <br />
 
 ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/snapshot.png)
 
-### Results from the Ensemble Techniques
+# Results from the Ensemble Techniques
 
 In this section, I showcase the top-performing models from my experiments, highlighting their performance metrics.  <br />
 
