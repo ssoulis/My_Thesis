@@ -138,10 +138,23 @@ In this section, I showcase the top-performing models from my experiments, highl
 
   ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/stacking.png)
 
- **Hybrid Ensemble**:
-   
- **Snapshot Ensemble**: 
+ ### Performance of Top Models on Hybrid Ensemble:
+ 
+| Model                  | SNLI (%) | MNLI (%) | ANLI (%) | Combined Tasks (%) |
+|------------------------|----------|----------|----------|--------------------|
+| 2LevelStackingLog       | 96.28    | 97.24    | 67.17    | 96.22               |
+| 2LevelStackingFNN       | 95.87    | 97.04    | 72.39    | 95.83               |
 
+ ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/hybrid.png)
+   
+ ### Performance of Top Models on Snapshot Ensemble:
+ 
+| Model        | SNLI (%) | MNLI-m (%) | MNLI-mm (%) | ANLI R1 (%) | ANLI R2 (%) | ANLI R3 (%) | Combined Tasks (%) |
+|--------------|----------|------------|-------------|-------------|-------------|-------------|--------------------|
+| DeBERTa AVG  | 93.08    | 90.85      | 91.4        | 85.4        | 69.6        | 76.25       | 90.46               |
+| DeBERTa MV   | 93       | 91.07      | 91.39       | 85.6        | 70.4        | 73.58       | 90.43               |
+
+ ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/snapshot.png)
 
 
 
