@@ -126,13 +126,21 @@ The following image shows the snapshot ensemble architecture. <br />
 
 ### Results from the Ensemble Techniques
 
-In this section, I showcase the top-performing models from my experiments, highlighting their performance metrics
+In this section, I showcase the top-performing models from my experiments, highlighting their performance metrics.  <br />
 
-- **Stacking Ensemble**:
-  ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/stacking.png)
-- **Hybrid Ensemble**:
+### Performance of Different Models on Stacking Ensemble:
+
+| Model        | Accuracy (%)  | Recall (%)  | F1-score (%) |
+|--------------|---------------|-------------|--------------|
+| FNN          | 94.89         | 95          | 97           |
+| RNN          | 94.84         | 95          | 94           |
+| **CapsuleNet** | **95.33**    | **96**      | **78**       |
+<br />
+![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/stacking.png)
+
+ **Hybrid Ensemble**:
    
-- **Snapshot Ensemble**: 
+ **Snapshot Ensemble**: 
 
 
 
