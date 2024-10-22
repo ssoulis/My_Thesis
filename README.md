@@ -20,4 +20,48 @@ This repository contains all the code and research work conducted as part of my 
 
 The repository is organized into the following key folders:
 
-My_Thesis/ │ ├── Explainability/ # Code and experiments related to model explainability ├── Fine_Tuning_For_Sentiment_Analysis/ # Fine-tuning pre-trained models on sentiment analysis tasks ├── NLI/ # Natural Language Inference (NLI) experiments and results │ ├── Hybrid_Ensemble/ # Code for stacking ensemble techniques │ ├── Models/ # Pre-trained models used for various datasets │ ├── Recall_F1-score/ # Scripts to calculate recall and F1 scores │ ├── Snapshot_ensemble/ # Snapshot ensemble implementation │ ├── albert-xxlarge-v2-snli.ipynb # Model evaluation on SNLI dataset using ALBERT │ ├── deberta3-MNLI-m.ipynb # Model evaluation on MNLI dataset using DeBERTa │ ├── ensemble-CapsuleNet-feuture.ipynb # Ensemble with CapsuleNet as meta model │ └── [additional NLI evaluations and ensemble codes] ├── coding_Tranformers/ # Experiments with transformers and model code ├── pretrain_BERT/ # Pretraining BERT-based models └── README.md # Project README
+```bash
+My_Thesis/
+│
+├── Explainability/                # Code and experiments related to model explainability
+├── Fine_Tuning_For_Sentiment_Analysis/  # Fine-tuning pre-trained models on sentiment analysis tasks
+├── NLI/                           # Natural Language Inference (NLI) experiments and results
+│   ├── Hybrid_Ensemble/           # Hybrid ensemble implementation
+│   ├── Models/                    # Pre-trained models used for various datasets
+│   ├── Recall_F1-score/           # Scripts to calculate recall and F1 scores
+│   ├── Snapshot_ensemble/         # Snapshot ensemble implementation
+├── coding_Tranformers/            # Experiments with transformers and model code
+├── pretrain_BERT/                 # Pretraining BERT-based models
+└── README.md                      # Project README
+```
+
+
+
+### NLI Folder Structure
+
+- **Hybrid_Ensemble**: Contains the code for applying stacking ensemble techniques by combining predictions from multiple models.
+- **Models**: Includes the configurations and pretrained models for NLI tasks (SNLI, MNLI, ANLI).
+- **Recall_F1-score**: Scripts for calculating recall and F1 scores for the evaluated models.
+- **Snapshot_ensemble**: Contains snapshot ensemble implementations for NLI tasks.
+
+## Prerequisites
+
+To run the code in this repository, you'll need:
+
+- Python 3.7 or later
+- Key libraries:
+  - `transformers`
+  - `torch`
+  - `sklearn`
+  - `numpy`
+  - `matplotlib`
+
+Install all required dependencies using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+
+
+
