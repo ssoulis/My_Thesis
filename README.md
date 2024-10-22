@@ -23,7 +23,7 @@ The repository is organized into the following key folders:
 ```bash
 My_Thesis/
 │
-├── Explainability/                # Code and experiments related to model explainability
+├── Explainability/                # Applied explainability techniques like SHAP and LIME on key models
 ├── Fine_Tuning_For_Sentiment_Analysis/  # Fine-tuning pre-trained models on sentiment analysis tasks
 │   ├── Data/ 
 ├── NLI/                           # Natural Language Inference (NLI) experiments and results
@@ -81,7 +81,49 @@ For running the stacking ensemble model with CapsuleNet, use:
 ``` bash
 jupyter notebook NLI/ensemble-CapsuleNet-feuture.ipynb
 ```
+Note that for the scripts to run you need to have the datasets installed. I propose kaggle which is the website I used for my experiments.
+
 ## Model Evaluation
+
+The models were evaluated on various NLI datasets, including:
+
+- SNLI (Stanford Natural Language Inference): Dataset for sentence pairs with entailment, contradiction, or neutral labels.
+- MNLI (Multi-Genre Natural Language Inference): Dataset for testing NLI models across multiple genres.
+- ANLI (Adversarial Natural Language Inference): A challenging dataset for evaluating models on adversarial samples.
+- Combined Tasks: A combination of the previous datasets
+
+We evaluated model performance using metrics like accuracy, recall, precision, and F1-score.
+
+
+## Ensemble Techniques
+
+In this project, we employed three types of ensemble learning techniques:  **Stacking Ensemble Technique**, **Hybrid Ensemble** and **Snapshot Ensemble**. These techniques combine multiple models to improve performance beyond what a single model can achieve.
+
+### 1. Stacking Ensemble Technique
+
+The **stacking ensemble** method is an approach where multiple base models make predictions, and a meta-model is trained to aggregate these predictions into the final output. In our setup, we used models such as ALBERT and DeBERTa as base models, and then fed their predictions into a meta-model.
+This approach allowed us to leverage the strengths of each base model and achieve higher accuracy and better performance metrics compared to individual models. The meta-model (CapsuleNet) learned to weigh the predictions from the base models optimally to generate the final output.
+The following image shows the stacking ensemble technique architecture
+![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Stacking.PNG)
+
+### 2. Hybrid Ensemble Technique
+The Hybrid Ensemble approach combines various ensembling methods, including Bayesian combination, majority voting, and stacking, to aggregate predictions from different models.
+
+### 3. Snapshot Ensemble Technique
+
+The **snapshot ensemble** technique takes a different approach by using **cyclic learning rates** during the training of a single model. Instead of training multiple different models, we save several versions (snapshots) of the same model at different points during training. Each of these snapshots can make predictions, and the final prediction is made by averaging the outputs from all snapshots.
+
+- **Cyclic Learning Rates**: By periodically adjusting the learning rate during training, the model explores different regions of the parameter space, capturing multiple diverse solutions.
+- **Model Snapshots**: Several snapshots of the model were saved at different points in the training cycle.
+- **Averaging**: The final output is obtained by averaging the predictions from the different model snapshots.
+
+The snapshot ensemble technique is efficient because it doesn’t require training multiple models from scratch. Instead, it reuses different versions of the same model to create an ensemble, thereby reducing the computational cost while still improving performance.
+
+### Results from the Ensemble Techniques
+
+- **Hybrid Ensemble**: The stacking ensemble with CapsuleNet as the meta-model provided significant improvements in terms of F1-score and accuracy across various datasets, outperforming the base models used individually.
+- **Snapshot Ensemble**: This technique provided performance gains by using diverse snapshots of the same model, achieving more robust predictions without the need to train multiple models from scratch.
+
 
 
 
