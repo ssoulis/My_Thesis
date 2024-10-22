@@ -13,8 +13,7 @@ This repository contains all the code and research work conducted as part of my 
 - [Model Evaluation](#model-evaluation)
 - [Ensemble Technique](#ensemble-technique)
 - [Results](#results)
-- [References](#references)
-- [Acknowledgements](#acknowledgements)
+
 
 ## Folder Structure
 
@@ -103,34 +102,37 @@ In this project, we employed three types of ensemble learning techniques:  **Sta
 
 The **stacking ensemble** method is an approach where multiple base models make predictions, and a meta-model is trained to aggregate these predictions into the final output. In our setup, we used models such as ALBERT and DeBERTa as base models, and then fed their predictions into a meta-model.<br />
 
-The following image shows the stacking ensemble technique architecture<br />
+The following image shows the stacking ensemble technique architecture. <br />
 ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Stacking.PNG)
 
 ### 2. Hybrid Ensemble Technique
 The Hybrid Ensemble approach combines various ensembling methods, including Bayesian combination, majority voting, and stacking, to aggregate predictions from different models.<br />
 
-The following image shows the hybrid ensemble technique architecture that leverages Stacking, Bayesian Combination and majority/weighted vote<br />
+The following image shows the hybrid ensemble technique architecture that leverages Stacking, Bayesian Combination and majority/weighted vote. <br />
 
 ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/SBM-SBW.png)
 
-The following image shows the hybrid ensemble of the 2 Level Stacking model<br />
+The following image shows the hybrid ensemble of the 2 Level Stacking model. <br />
 
 ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/2LevelStacking.PNG)
 
 ### 3. Snapshot Ensemble Technique
 
-The **snapshot ensemble** technique takes a different approach by using **cyclic learning rates** during the training of a single model. Instead of training multiple different models, we save several versions (snapshots) of the same model at different points during training. Each of these snapshots can make predictions, and the final prediction is made by averaging the outputs from all snapshots.
+The **snapshot ensemble** technique takes a different approach by using **cyclic learning rates** during the training of a single model. Instead of training multiple different models, we save several versions (snapshots) of the same model at different points during training. Each of these snapshots can make predictions, and the final prediction is made by averaging  or using majority vote on the outputs from all snapshots.  <br />
 
-- **Cyclic Learning Rates**: By periodically adjusting the learning rate during training, the model explores different regions of the parameter space, capturing multiple diverse solutions.
-- **Model Snapshots**: Several snapshots of the model were saved at different points in the training cycle.
-- **Averaging**: The final output is obtained by averaging the predictions from the different model snapshots.
+The following image shows the snapshot ensemble architecture. <br />
 
-The snapshot ensemble technique is efficient because it doesn’t require training multiple models from scratch. Instead, it reuses different versions of the same model to create an ensemble, thereby reducing the computational cost while still improving performance.
+![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/snapshot.png)
 
 ### Results from the Ensemble Techniques
 
-- **Hybrid Ensemble**: The stacking ensemble with CapsuleNet as the meta-model provided significant improvements in terms of F1-score and accuracy across various datasets, outperforming the base models used individually.
-- **Snapshot Ensemble**: This technique provided performance gains by using diverse snapshots of the same model, achieving more robust predictions without the need to train multiple models from scratch.
+In this section, I showcase the top-performing models from my experiments, highlighting their performance metrics
+
+- **Stacking Ensemble**:
+  ![alt text](https://github.com/ssoulis/My_Thesis/blob/main/NLI/Models/stacking.png)
+- **Hybrid Ensemble**:
+   
+- **Snapshot Ensemble**: 
 
 
 
